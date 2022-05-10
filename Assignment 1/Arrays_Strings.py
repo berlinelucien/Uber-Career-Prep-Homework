@@ -12,6 +12,7 @@ def isStringPermutation(s1: str, s2: str) -> bool:
          return True
      # check of both the length of the string are the same
      # count the character in both of the string
+     # create a hashmap to keep track of count
      
     countS1, countS2 = {}, {}
      
@@ -38,17 +39,27 @@ if __name__ == '__main__':
         print("No")
 
 
-
-
-
 """
 pairsThatEqualSum(...)
-Implement the function pairsThatEqualSum() that takes an array of integers and a target integer and returns an array of pairs (i.e., an array of tuples) where each pair contains two numbers from the input array and the sum of each pair equals the target integer. (Order of the output does not matter).
 
-Below are some examples:
 pairsThatEqualSum(inputArray: [1, 2, 3, 4, 5], targetSum: 5) == [(1, 4), (2, 3)]
 pairsThatEqualSum(inputArray: [1, 2, 3, 4, 5], targetSum: 1) == []
 pairsThatEqualSum(inputArray: [1, 2, 3, 4, 5], targetSum: 7) == [(2, 5), (3, 4)]
 
+"""
+    
+def pairsThatEqualSum(inputArray: list, targetSum: int) -> list:
+    
+    for i in range(len(inputArray))-1:
+        for j in range(i + 1, len(inputArray)):
+            
+            if inputArray[i] + inputArray[j] == targetSum:
+                print ('Pair found', (inputArray[i],inputArray[j]))
+                
 
-    """
+if __name__ == '__main__':
+    inputArray = [1,2,3,4,5]
+    targetSum = 5
+    pairsThatEqualSum(inputArray,targetSum)
+    
+    
