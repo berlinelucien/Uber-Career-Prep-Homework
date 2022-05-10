@@ -1,4 +1,6 @@
 """
+Part 3: Stacks and Queues (2 hrs): 
+
 Challenge: Implement the Stack class from scratch
 (do not use your language’s standard stack or queue library/package
  methods). In this challenge, your Stack will only accept
